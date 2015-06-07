@@ -1,0 +1,5 @@
+- hosts: all
+  
+  tasks:
+  - name: Add RSA key to the remote host
+    authorized_key: user="{{ lookup('env', 'USER') }}" key="{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
