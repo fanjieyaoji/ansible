@@ -1,0 +1,5 @@
+- hosts: all
+  
+  tasks:
+  - name: say hello
+    osx_say: msg="Hello" voice=Victoria
